@@ -31,7 +31,7 @@ def algoritm(start_number, gap_number, last_number):
 
 
 # Problema 2
-# Conversie din cifre romane in arabe si invers (clasa)
+# Conversie din cifre romane in cifre arabe 
 
 def roman(number):
 
@@ -56,14 +56,11 @@ def roman(number):
 
 
 
-# 3.) Write a Python program to create an instance of a specified class and display the namespace of the said instance
 
 
 
 
-
-
-# 4.)4.) Write a Python class to get all possible unique subsets from a set of distinct integers. Go to the editor
+# 4.) Write a Python class to get all possible unique subsets from a set of distinct integers. Go to the editor
 # Input : [4, 5, 6]
 # Output : [[], [6], [5], [5, 6], [4], [4, 6], [4, 5], [4, 5, 6]]
 def list_creator(*numbers):
@@ -124,58 +121,6 @@ def password_creator(ch_numbers):
         password += ch_list[count]
         count+=1
     return password
-
-
-class Castellon:
-    temperatura = (30,36)
-    def __init__(self,ziua,luna,anul):
-        self.ziua = ziua
-        self.luna = luna
-        self.anul = anul
-
-    def go_to_beach(self, mijloc_de_transport):
-        alternatives = ["by_bus","by_bike","by_car","by_walking"]
-        if mijloc_de_transport == alternatives[0]:
-            return 30
-        if mijloc_de_transport == alternatives[1]:
-            return 30
-        if mijloc_de_transport == alternatives[2]:
-            return 10
-        if mijloc_de_transport == alternatives[3]:
-            return 60
-        else:
-            return None
-
-    def go_to_bar(self):
-        bars =["centru","salera","la liviu"]
-        return "You can go to : ",bars, "etc"
-
-switch_case = {
-    1: "spring",
-    2: "summer",
-    3: "autumn",
-    4: "winter",
-}
-
-def switch(x):
-    switch_case = {
-        "01": "spring",
-        "02": "summer",
-        "03": "autumn",
-        "04": "winter"
-    }
-    return switch_case[x]
-
-switch_cases = {
-        1: "spring",
-        2: "summer",
-        3: "autumn",
-        4: "winter"
-    }
-
-patrat = lambda n,b,c : n*b*c
-
-
 
 
 #PY100FUNCTIONS ex 1:
