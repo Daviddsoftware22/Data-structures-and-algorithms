@@ -1,9 +1,8 @@
 import time
-from playsound import playsound
 import random
 import math
 import os
-import webbrowser
+
 
 def turn_off(y):
     print(f"From now {time.ctime()}")
