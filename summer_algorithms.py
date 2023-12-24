@@ -1,5 +1,5 @@
-# Probleme de algoritmica random
-# Problema 1
+# Problem solving and algorithms
+# Problem 1
 # 1! + 2! + 3! + 4! + ... +n!
 import random
 
@@ -30,8 +30,8 @@ def algoritm(start_number, gap_number, last_number):
     return final_result
 
 
-# Problema 2
-# Conversie din cifre romane in cifre arabe 
+# Problem 2
+# Conversion of roman numbers in arabic numbers
 
 def roman(number):
 
@@ -48,19 +48,12 @@ def roman(number):
         10 : "X"
     }
     result = ""
-    result += dictionaire.get(number, "nu corespunde")
+    result += dictionaire.get(number, "does not match")
     return result
 
 
-
-
-
-
-
-
-
-
-# 4.) Write a Python class to get all possible unique subsets from a set of distinct integers. Go to the editor
+# Problem 3
+# Write a Python class to get all possible unique subsets from a set of distinct integers. Go to the editor
 # Input : [4, 5, 6]
 # Output : [[], [6], [5], [5, 6], [4], [4, 6], [4, 5], [4, 5, 6]]
 def list_creator(*numbers):
@@ -108,8 +101,8 @@ def givesubset(*args):
 
 pp = givesubset(9,8,2)
 
-
-#5.) Random strong password creator
+# Problem 4
+# Random strong password creator
 def password_creator(ch_numbers):
     count = 0
     ch_list = []
@@ -122,8 +115,7 @@ def password_creator(ch_numbers):
         count+=1
     return password
 
-
-#PY100FUNCTIONS ex 1:
+# Problem 5
 #Write a Python function to find the Max of three numbers.
 
 def max_number(list):
@@ -136,8 +128,7 @@ def max_number(list):
     return list[spot_number]
 
 
-
-#PY100FUNCTIONS ex 2:
+# Problem 6
 #Write a Python function to sum all the numbers in a list.
 
 def sum_numbers(lista):
@@ -152,8 +143,8 @@ def sum_numbers(lista):
 output = [8,2,3,-1,7]
 
 
-#PY100FUNCTIONS ex 3:
-#Write a Python function to multiply all the numbers in a list.
+# Problem 7
+# Write a Python function to multiply all the numbers in a list.
 def multiply_numbers(lista):
     try_number = 0
     result = 1
@@ -162,8 +153,8 @@ def multiply_numbers(lista):
         try_number += 1
     return result
 
-#PY100FUNCTIONS ex 4:
-#Write a Python program to reverse a string.
+# Problem 8
+# Write a Python program to reverse a string.
 
 sample_string = "1234abcd"
 
@@ -176,9 +167,9 @@ def string_reverser(string):
         output += string[-1*counter]
     return output
 
-#PY100FUNCTIONS ex 5:
-#Write a Python function to calculate the factorial of a number (a non-negative3 integer).
-#The function accepts the number as an argument.
+# Problem 9
+# Write a Python function to calculate the factorial of a number (a non-negative3 integer).
+# The function accepts the number as an argument.
 
 def check(*arguments):
 
@@ -193,8 +184,8 @@ def check(*arguments):
 
 
 
-#PY100FUNCTIONS ex 6:
-#Write a Python function that takes a list and calculate the number of upper case letters and lower case letter
+# Problem 10
+# Write a Python function that takes a list and calculate the number of upper case letters and lower case letter
 
 
 def upp_low_counter(phrase):
@@ -229,3 +220,82 @@ def interviu_problem(pback,p2,p3,p4,baterry_left):
         return True
     if result > baterry_left:
         return False ,result
+
+
+# Problem 11
+# Write a Python function that finds the nth fibonacci number
+# The input of this function should be a number
+# This function will give as output the n-th number of a fibonacci list
+
+def fibonacci(nth_number):
+    list = []
+
+    number = 0
+    next_number = 1
+    counter = 0
+
+    while counter != round(nth_number):
+        counter += 1
+        list.append(next_number)
+        number = next_number -number
+        next_number = next_number+number
+
+
+    return next_number,list
+
+# Problem 12
+# Write a Python function that reverse a number
+# The input of this function should be the reversed number
+
+
+def reversed_number(num):
+    separated_units =[]
+
+    output = 0
+    nr = 0
+    for unit in str(num):
+        separated_units.append(unit)
+
+    count = len(separated_units)
+    reversed_separated_units = separated_units[::-1]
+    while count != 0:
+        output += int(reversed_separated_units[nr]) * 10 ** (count - 1)
+        count -= 1
+        nr += 1
+    return output
+
+
+# Problem 13
+# Create a class that calculates reversed numbers and fibonacci
+
+class Calculations:
+    def __init__(self,number):
+        self.number = number
+
+
+    def reversed_number(self):
+        separated_units = []
+        output = 0
+        nr = 0
+        for unit in str(self.number):
+            separated_units.append(unit)
+        count = len(separated_units)
+        reversed_separated_units = separated_units[::-1]
+        while count != 0:
+            output += int(reversed_separated_units[nr]) * 10 ** (count - 1)
+            count -= 1
+            nr += 1
+        return output
+
+    def fibonacci(self):
+        list = []
+        nr = 0
+        next_number = 1
+        counter = 0
+        while counter != round(self.number):
+            next_number = next_number + nr
+            counter += 1
+            list.append(next_number)
+            nr = next_number - nr
+        return next_number
+
