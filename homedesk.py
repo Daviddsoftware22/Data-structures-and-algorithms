@@ -1,3 +1,6 @@
+# Function that turn off the computer based on the given time
+# The function must obtain an input that represents the time in seconds
+
 import time
 import random
 import math
